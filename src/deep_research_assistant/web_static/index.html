@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Deep-Research-Assistant · 通用深度研究</title>
+    <link rel="stylesheet" href="/assets/styles.css?v=9" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="nav-rail" aria-label="主要导航">
+        <div class="rail-brand" aria-hidden="true">D</div>
+        <button class="rail-button" id="menu-button" type="button" aria-label="展开历史会话" aria-controls="sidebar" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h11" /></svg>
+        </button>
+        <div class="rail-spacer"></div>
+        <div class="rail-status" aria-label="服务已连接"><span></span></div>
+      </aside>
+
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-heading">
+          <strong>历史会话</strong>
+          <button class="icon-button sidebar-close" id="sidebar-close" aria-label="收起历史会话">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l-6-6 6-6M3 12h18" /></svg>
+          </button>
+        </div>
+
+        <button class="new-chat-button" id="new-chat-panel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+          <span>新建调研</span>
+        </button>
+
+        <div class="history-label">最近</div>
+        <nav class="history-list" id="history-list" aria-label="历史会话"></nav>
+
+        <div class="sidebar-footer">
+          <div class="system-state"><span class="status-dot"></span> 服务已连接</div>
+        </div>
+      </aside>
+
+      <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="conversation-heading">
+            <h1 id="conversation-title">新调研</h1>
+            <div class="conversation-status" id="conversation-status">等待输入</div>
+          </div>
+          <div class="topbar-badge"><span></span> 服务已连接</div>
+        </header>
+
+        <section class="conversation" id="conversation-view">
+          <div class="empty-state" id="empty-state">
+            <h2>你想研究什么？</h2>
+            <p>输入问题，也可以补充目标、受众、时间范围或报告长度。</p>
+          </div>
+          <div class="message-list" id="message-list" aria-live="polite"></div>
+        </section>
+
+        <footer class="composer-wrap" id="composer-wrap">
+          <form class="composer" id="composer">
+            <textarea
+              id="message-input"
+              rows="2"
+              maxlength="8000"
+              placeholder="描述你想调研的问题…"
+              aria-label="调研问题"
+            ></textarea>
+            <span class="composer-source">支持 Web、学术论文与 MCP 来源</span>
+            <button class="send-button" id="send-button" type="submit" aria-label="发送">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+            </button>
+          </form>
+          <p class="composer-note">Hy3 负责规划、反思与综合；来源可来自 Tavily、OpenAlex 和动态 MCP 工具。重要结论请核查原文。</p>
+        </footer>
+      </main>
+    </div>
+
+    <div class="report-overlay" id="report-overlay" aria-hidden="true">
+      <div class="report-panel">
+        <header class="report-header">
+          <div>
+            <div class="eyebrow">RESEARCH REPORT</div>
+            <h2>调研报告</h2>
+          </div>
+          <button class="icon-button" id="report-close" aria-label="关闭报告">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+          </button>
+        </header>
+        <article class="report-content" id="report-content"></article>
+      </div>
+    </div>
+
+    <div class="confirm-overlay" id="delete-overlay" aria-hidden="true">
+      <div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+        <div class="confirm-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M7 7l1 13h8l1-13M10 11v5M14 11v5" /></svg>
+        </div>
+        <h3 id="delete-title">删除这条会话？</h3>
+        <p><span id="delete-conversation-name"></span> 的消息、研究报告和流程记录都会被永久删除。</p>
+        <div class="action-row">
+          <button class="secondary-button" id="delete-cancel" type="button">取消</button>
+          <button class="danger-button" id="delete-confirm" type="button">确认删除</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script src="/assets/app.js?v=9" defer></script>
+  </body>
+</html>

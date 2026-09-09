@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-deep_research_assistant}
+      POSTGRES_USER: ${POSTGRES_USER:-deep_research_assistant}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-deep_research_assistant_local_only}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - deep-research-assistant-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}",
+        ]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  deep-research-assistant-postgres:

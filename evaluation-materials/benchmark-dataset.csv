@@ -1,0 +1,31 @@
+﻿question,case_id,domain,difficulty
+请解释RESTful API与GraphQL在数据获取方式上的核心区别。,tech_001,technology,easy
+列举三种常见的微服务通信模式并简述其适用场景。,tech_002,technology,easy
+对比分析Kubernetes中Deployment与StatefulSet在状态管理上的差异及选型依据。,tech_003,technology,medium
+调研目前主流大模型推理加速框架（如vLLM、TensorRT-LLM）的性能基准与显存优化策略。,tech_004,technology,medium
+深入分析从单体架构迁移至事件驱动架构时，如何保证分布式事务的最终一致性与数据回溯能力。,tech_005,technology,hard
+评估Rust语言在高并发网络中间件开发中相比C++的内存安全优势与实际工程落地中的FFI性能损耗。,tech_006,technology,hard
+查找并列出近五年Nature期刊上关于CRISPR基因编辑技术的综述文章标题。,academic_001,academic,easy
+解释机器学习领域中“过拟合”与“欠拟合”的定义及常用解决方法。,academic_002,academic,easy
+梳理Transformer架构自2017年提出以来在自然语言处理任务中的关键改进节点及其引用量变化。,academic_003,academic,medium
+调研当前钙钛矿太阳能电池稳定性研究的主要瓶颈及近三年顶刊提出的解决方案汇总。,academic_004,academic,medium
+综合分析社会学定量研究中因果推断方法（如DID、RDD）在政策评估应用中的假设检验局限性与稳健性争议。,academic_005,academic,hard
+批判性评估多模态大模型在医学影像诊断领域的现有文献中数据集偏差对临床泛化能力的影响及伦理风险。,academic_006,academic,hard
+解释市盈率（P/E）与市净率（P/B）估值指标的适用行业差异。,finance_001,finance,easy
+简述美联储加息周期对新兴市场资本流动的常规传导机制。,finance_002,finance,easy
+调研绿色债券发行中“漂绿”风险的识别标准及第三方认证机构的评估体系现状。,finance_003,finance,medium
+分析量化交易策略中高频因子衰减现象的成因及主流机构的因子挖掘迭代方法论。,finance_004,finance,medium
+深入剖析DeFi协议中闪电贷攻击的底层合约漏洞机理及跨链桥资产安全审计的最新防御范式。,finance_005,finance,hard
+综合评估巴塞尔协议III最终版实施对中国中小银行资本充足率、信贷投放结构及盈利能力的全方位压力测试影响。,finance_006,finance,hard
+定义SaaS业务中的ARR指标并说明其与MRR的换算关系。,business_001,business,easy
+简述A/B测试在产品功能迭代中的基本执行流程。,business_002,business,easy
+调研中国新能源汽车出海欧洲市场时面临的主要本地化运营挑战及头部企业的应对策略。,business_003,business,medium
+分析B2B SaaS产品在PLG（产品驱动增长）与SLG（销售驱动增长）模式切换时的关键组织阵痛与成功要素。,business_004,business,medium
+深度拆解Shein柔性供应链体系中“小单快反”模式的数字化协同机制及其对传统服装制造业成本结构的重构逻辑。,business_005,business,hard
+基于波特五力模型与PESTEL框架，综合研判生成式AI工具在未来三年对企业级知识管理软件市场的颠覆路径与护城河演变。,business_006,business,hard
+查询中国现行医保目录中抗肿瘤靶向药的报销比例及准入条件。,safe_001,public_safety,easy
+简述《个人信息保护法》中关于敏感个人信息处理的核心合规要求。,safe_002,public_safety,easy
+调研各地长期护理保险试点政策在筹资机制与待遇支付标准上的差异化模式及可持续性评估。,safe_003,public_safety,medium
+分析城市智慧交通信号控制系统在隐私保护与公共效率平衡方面的技术实现与法规约束。,safe_004,public_safety,medium
+深度追踪美国《芯片与科学法案》补贴发放细则对全球半导体供应链地缘政治格局的重塑效应及中国企业替代路径的可行性边界。,safe_005,public_safety,hard
+系统性评估mRNA疫苗技术在罕见遗传病治疗领域的临床试验进展、监管审批障碍及卫生经济学层面的可及性挑战。,safe_006,public_safety,hard

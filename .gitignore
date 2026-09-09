@@ -1,0 +1,50 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python environments, caches, and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+.pyright/
+.uv-cache/
+dist/
+build/
+*.egg-info/
+
+# Editors and operating-system metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# LangGraph and application runtime data
+.langgraph_api/
+data/
+outputs/
+tmp/
+logs/
+*.log
+*.pid
+*.tmp
+*.bak
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
