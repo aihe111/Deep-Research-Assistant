@@ -1,6 +1,5 @@
 # Deep-Research-Assistant
 
-> 个人 / 犀牛鸟开源实战活动作品，非腾讯官方发布。
 
 Deep-Research-Assistant 是一个基于 Hy3、LangGraph 和多来源工具的通用深度研究 Agent。它不限定于
 AI 论文调研：科技、商业、政策、产品、医学等领域都由同一套 Manager / Researcher 架构处理。
